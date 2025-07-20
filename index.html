@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך מעבר לקלאסרום משרד החינוך</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f6; /* Lighter background */
+            color: #333;
+        }
+        .container {
+            max-width: 1024px; /* Slightly wider container */
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1, h2, h3 {
+            color: #2c3e50; /* Darker text for headings */
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.8rem; /* Slightly larger main title */
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #4a5568; /* Softer indigo */
+        }
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #cbd5e0; /* Lighter border */
+            padding-bottom: 0.5rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.7; /* Increased line height for readability */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        a {
+            color: #3b82f6; /* Brighter blue for links */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* More rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Softer, larger shadow */
+            padding: 2.5rem; /* More padding */
+            margin-bottom: 2rem;
+        }
+        .tip {
+            background-color: #e0f7fa; /* Lighter cyan */
+            border-right: 4px solid #26c6da; /* Cyan border */
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.75rem;
+            color: #006064; /* Darker text for contrast */
+        }
+        .important-note {
+            background-color: #fffde7; /* Lighter yellow */
+            border-right: 4px solid #ffd54f; /* Yellow border */
+            padding: 1.2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.75rem;
+            color: #8d6e63; /* Brownish text for contrast */
+        }
+
+        /* Tab specific styles */
+        .tab-button {
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem 0.75rem 0 0;
+            background-color: #e2e8f0;
+            color: #4a5568;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            margin-left: 0.25rem;
+            margin-right: 0.25rem;
+            white-space: nowrap; /* Prevent wrapping */
+        }
+        .tab-button.active {
+            background-color: #ffffff;
+            color: #3b82f6;
+            box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-top: 3px solid #3b82f6;
+        }
+        .tab-content {
+            display: none;
+            padding-top: 1rem;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .tabs-container {
+            overflow-x: auto; /* Enable horizontal scrolling for tabs */
+            white-space: nowrap; /* Keep tabs in a single line */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            padding-bottom: 1rem; /* Space for scrollbar */
+            margin-bottom: 1rem; /* Added margin */
+            background-color: #f8fafd; /* Light background for the scrollable area */
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.1); /* Subtle inner shadow to indicate scrollability */
+            padding-top: 0.5rem; /* Add some vertical padding */
+            padding-left: 1rem; /* Add horizontal padding */
+            padding-right: 1rem; /* Add horizontal padding */
+            display: flex; /* Use flexbox for alignment */
+            justify-content: flex-start; /* Align tabs to the start (right in RTL) */
+        }
+    </style>
+</head>
+<body class="rtl">
+    <div class="container">
+        <header class="text-center py-8 bg-white rounded-xl shadow-md mb-8">
+            <h1 class="text-4xl font-extrabold text-indigo-700">מדריך מעבר לקלאסרום משרד החינוך</h1>
+            <p class="text-xl text-gray-600 mt-2">הדרכה מקיפה למורים</p>
+        </header>
+
+        <main>
+            <div class="card mb-8">
+                <p>שלום לכולם,</p>
+                <p>כחלק משיפור וייעול התהליכים הדיגיטליים בבית הספר, אנו עוברים באופן מלא לשימוש ב-Google Classroom של משרד החינוך לכל שכבות הגיל, מחטיבת הביניים ועד התיכון. מעבר זה יאפשר לנו סביבת עבודה אחידה, מאובטחת ומתקדמת יותר, עם מגוון כלים שיעצימו את ההוראה והלמידה.</p>
+                <p>המדריך הזה ילווה אתכם צעד אחר צעד בתהליך המעבר, החל מההתחברות הראשונית ועד לשימוש בכלים המתקדמים ביותר בקלאסרום.</p>
+            </div>
+
+            <div class="tabs-container">
+                <button class="tab-button active" data-tab="tab1">1. התחברות</button>
+                <button class="tab-button" data-tab="tab2">2. יצירת קלאסרום</button>
+                <button class="tab-button" data-tab="tab3">3. ממשק הקלאסרום</button>
+                <button class="tab-button" data-tab="tab4">4. פרסום חומרים</button>
+                <button class="tab-button" data-tab="tab5">5. בדיקת מטלות</button>
+                <button class="tab-button" data-tab="tab6">6. Google Meet</button>
+                <button class="tab-button" data-tab="tab7">7. לוח ציור דיגיטלי</button>
+                <button class="tab-button" data-tab="tab8">8. מצגת Slides AI</button>
+                <button class="tab-button" data-tab="tab9">9. סיוע Gemini</button>
+                <button class="tab-button" data-tab="tab10">10. כלי Gemini (עתידי)</button>
+                <button class="tab-button" data-tab="tab11">11. העברת Drive</button>
+                <button class="tab-button" data-tab="tab12">12. Gemini Canvas</button>
+                <button class="tab-button" data-tab="tab13">המלצות</button> <!-- New tab button -->
+            </div>
+
+            <div id="tab1" class="tab-content active card">
+                <h2>1. התחברות לבית הספר הווירטואלי וגישה ל-Google Classroom</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=מסך+התחברות" alt="Image of Login screen" class="w-full h-auto rounded-lg mb-4">
+                <p>"הבית הספר הווירטואלי" הוא השער שלכם לכל הכלים הדיגיטליים של משרד החינוך, כולל ה-Google Classroom. הכניסה אליו מתבצעת באמצעות "הזדהות אחידה", מה שמבטיח גישה מאובטחת.</p>
+
+                <h3>שלב 1: כניסה לבית הספר הווירטואלי</h3>
+                <ol>
+                    <li>פתחו את הדפדפן (מומלץ כרום) וגשו לכתובת: <a href="https://my.edu.gov.il/home" target="_blank">https://my.edu.gov.il/home</a></li>
+                    <li>לחצו על כפתור "התחברות" המופיע בדף הבית של הבית הספר הווירטואלי.</li>
+                    <li>לאחר מכן, תועברו למסך ה<strong>"הזדהות אחידה"</strong> של משרד החינוך.</li>
+                    <li>הקלידו את שם המשתמש והסיסמה האישיים שלכם של משרד החינוך. אלו אותם פרטי התחברות שאתם משתמשים בהם לכניסה למערכות משרד החינוך האחרות (כמו פורטל עובדי הוראה).</li>
+                    <li>במידה ושכחתם את פרטי ההתחברות, תוכלו להתחבר באמצעות "כניסה עם קוד חד פעמי לנייד".</li>
+                    <li>אם נתקלתם בבעיה בהתחברות (לדוגמה, לא זוכרים סיסמה וגם מספר הטלפון אינו מעודכן במאגר), ניתן לפנות למרכז השירות והמידע הארצי של משרד החינוך בטלפון *6552. בנוסף, ניתן לבצע איפוס סיסמה עצמאי דרך האפשרות "שכחתי סיסמה" המופיעה במסך ההזדהות, שם תוכלו לאמת את זהותכם באמצעות תאריך הנפקת תעודת הזהות של ההורה/תלמיד/מורה.</li>
+                </ol>
+                <div class="tip">
+                    <p class="font-semibold">טיפ חשוב:</p>
+                    <p>ודאו שאתם מחוברים למערכת עם חשבון משרד החינוך ולא עם חשבון פרטי או של רשת עמל.</p>
+                </div>
+
+                <h3>שלב 2: איתור וגישה ל-Google Classroom</h3>
+                <ol>
+                    <li>לאחר ההתחברות המוצלחת, תגיעו לדף הבית של הבית הספר הווירטואלי.</li>
+                    <li>חפשו את הקישור או האייקון של "Google Classroom" או "כיתה" (הוא לרוב מופיע בצורה בולטת בדף הראשי, או תחת תפריט "אפליקציות" / "שירותים"). לחצו עליו.</li>
+                    <li>אם זו הפעם הראשונה שאתם נכנסים ל-Classroom דרך חשבון משרד החינוך, ייתכן שתתבקשו לאשר הרשאות גישה (לדוגמה, להתממשק עם חשבון הגוגל של משרד החינוך). אשרו את כל הבקשות.</li>
+                </ol>
+                <p class="font-bold">כעת אתם נמצאים ב-Google Classroom של משרד החינוך!</p>
+            </div>
+
+            <div id="tab2" class="tab-content card">
+                <h2>2. יצירת קלאסרום חדש (המבוסס על כיתה קיימת במאגר ועם שיבוץ תלמידים אוטומטי)</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=יצירת+כיתה+חדשה" alt="Image of Create new class" class="w-full h-auto rounded-lg mb-4">
+                <p>תהליך זה מאפשר לכם ליצור כיתת קלאסרום חדשה המקושרת ישירות לכיתה קיימת במאגר הנתונים של בית הספר, מה שמבטיח שיבוץ אוטומטי של התלמידים לכיתה.</p>
+
+                <h3>שלב 1: איתור אפשרות יצירת קלאסרום מהמאגר</h3>
+                <ol>
+                    <li>לאחר ההתחברות המוצלחת, תגיעו לדף הבית של הבית הספר הווירטואלי.</li>
+                    <li>חפשו את "מרחבי הלימוד שלי" ותחתיו את האפשרות "פתיחת מרחבי למידה חדשים". לחצו עליה.</li>
+                    <li>במסך הבא, לחצו על כפתור "+גוגל קלאסרום".</li>
+                    <li>בחרו את הכיתה המתאימה מהרשימה המוצגת לכם. רשימה זו מכילה את הכיתות הקיימות במאגר הנתונים של בית הספר.</li>
+                </ol>
+
+                <h3>שלב 2: מילוי פרטי הכיתה</h3>
+                <p>לאחר שבחרתם את הכיתה, ייתכן שתתבקשו לאשר או להשלים פרטים נוספים עבור כיתת הקלאסרום:</p>
+                <ul>
+                    <li><strong>שם הכיתה:</strong> הקפידו על שם ברור ומדויק שיכלול את המקצוע והשכבה (לדוגמה: "היסטוריה - י'1", "מתמטיקה - ז'3"). ייתכן ושם זה יוזן אוטומטית בהתאם לבחירתכם.</li>
+                    <li><strong>מדור:</strong> ניתן להזין את המקצוע.</li>
+                    <li><strong>נושא:</strong> לא חובה, אך אפשר להוסיף נושא כללי.</li>
+                    <li><strong>חדר:</strong> לא חובה.</li>
+                </ul>
+
+                <h3>שלב 3: יצירה</h3>
+                <ol>
+                    <li>לחצו על כפתור "צור".</li>
+                </ol>
+                <p>הכיתה החדשה שלכם נוצרה, והתלמידים המשויכים אליה במאגר הבית ספרי שובצו אוטומטית לקלאסרום זה.</p>
+            </div>
+
+            <div id="tab3" class="tab-content card">
+                <h2>סקירה כללית של ממשק הקלאסרום והלשוניות המרכזיות</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=ממשק+קלאסרום" alt="Image of Classroom interface" class="w-full h-auto rounded-lg mb-4">
+                <p>לאחר הכניסה לכיתת הקלאסרום, תפגשו חמש לשוניות ראשיות (תפריטים) בחלק העליון של המסך, אשר מנהלות את הפעילות השוטפת בכיתה:</p>
+
+                <h3>3.1 לשונית "עדכונים" (Stream)</h3>
+                <p>זוהי למעשה לוח המודעות של הכיתה. כאן תוכלו לפרסם הודעות, עדכונים, קישורים רלוונטיים, או שאלות פתוחות לדיון. הודעות אלו יופיעו בפני כל תלמידי הכיתה.</p>
+
+                <h3>3.2 לשונית "עבודת כיתה" (Classwork)</h3>
+                <p>לשונית זו היא המרכז לניהול כל התכנים הלימודיים, המטלות והפעילויות. כאן תוכלו:</p>
+                <ul>
+                    <li><strong>ליצור נושאים (Topics):</strong> כדי לשמור על סדר, מומלץ ליצור "נושאים" לפי יחידות לימוד, נושאים מרכזיים או שבועות.</li>
+                    <li><strong>ליצור חומרים (Material):</strong> לפרסום מצגות, קבצי קריאה, קישורים, סרטונים ועוד.</li>
+                    <li><strong>ליצור מטלות (Assignment):</strong> להגשת עבודות, תרגילים, פרויקטים וכו', כולל הגדרת ציון, תאריך יעד והצמדה לנושא. ניתן לצרף קובץ עזר ולבחור אם התלמידים יצפו בו, יערוכו אותו, או יקבלו עותק אישי.</li>
+                    <li><strong>ליצור שאלות:</strong> לשאלות קצרות ומהירות עם תשובה קצרה או בחירה מרובה.</li>
+                    <li><strong>ליצור בוחן מטלה:</b> ליצירת מבחנים ובוחנים באמצעות Google Forms.</li>
+                </ul>
+
+                <h3>3.3 לשונית "אנשים" (People)</h3>
+                <p>כאן תוכלו לנהל את המשתתפים בכיתה:</p>
+                <ul>
+                    <li><strong>הוספה והסרה של תלמידים:</strong> הזמנת תלמידים חדשים (אם לא שובצו אוטומטית) או הסרת תלמידים מהכיתה.</li>
+                    <li><strong>הזמנת מורים נוספים:</strong> הזמנת מורים שותפים (Co-teachers) שישתפו איתכם פעולה בניהול הכיתה, פרסום תכנים ובדיקת מטלות.</li>
+                </ul>
+
+                <h3>3.4 לשונית "ציונים" (Grades)</h3>
+                <p>לשונית זו מציגה את כל הציונים וההגשות של התלמידים בכיתה במבט אחד. כאן תוכלו:</p>
+                <ul>
+                    <li>לצפות ברשימת המטלות והציונים שהוגשו.</li>
+                    <li>לגשת במהירות לבדיקת מטלות תלמידים.</li>
+                    <li>לקבל תמונה כוללת של התקדמות הכיתה.</li>
+                </ul>
+
+                <h3>3.5 לשונית "ניתוח נתונים" (חדש!) (Data Analysis - New!)</h3>
+                <p>לשונית חדשנית זו מספקת תובנות מבוססות נתונים על הלמידה בכיתה:</p>
+                <ul>
+                    <li><strong>מעקב אחר התקדמות:</strong> הצגת דוחות וגרפים על ביצועי התלמידים במטלות השונות.</li>
+                    <li><strong>זיהוי דפוסי למידה:</strong> איתור נקודות חוזק וחולשה בכיתה או אצל תלמידים ספציפיים.</li>
+                    <li><strong>מעורבות תלמידים:</strong> קבלת מידע על רמת המעורבות של התלמידים בפעילויות השונות בקלאסרום.</li>
+                </ul>
+                <p>כלי זה מאפשר למורים לקבל תמונה מקיפה יותר על תהליך הלמידה ולבצע התאמות פדגוגיות בהתאם.</p>
+            </div>
+
+            <div id="tab4" class="tab-content card">
+                <h2>4. פרסום חומרים ומטלות בקלאסרום</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=פרסום+חומרים" alt="Image of Publishing materials" class="w-full h-auto rounded-lg mb-4">
+                <p>כפי שפורט בלשונית "עבודת כיתה", הקלאסרום הוא המרכז לפרסום תכנים:</p>
+                <ul>
+                    <li>לפרסום הודעה כללית או עדכון: השתמשו בלשונית "עדכונים".</li>
+                    <li>ליצירת נושאים, חומרים ומטלות לימודיות: עברו ללשונית "עבודת כיתה".</li>
+                </ul>
+                <p>לחיצה על כפתור "יצירה" תפתח בפניכם את האפשרויות ליצירת חומרים, מטלות, שאלות או בחנים.</p>
+                <p>זכרו לשייך כל פריט לנושא מתאים כדי לשמור על סדר.</p>
+
+                <h3>עדכונים צפויים:</h3>
+                <p>בקרוב יתווספו לקלאסרום אופציות מתקדמות נוספות לפרסום תכנים ויצירת מטלות, שינצלו יכולות בינה מלאכותית (AI) וכלי גוגל חדשים:</p>
+                <ul>
+                    <li><strong>שימוש ב-Gemini (ג'מיני):</strong> שילוב יכולות ג'מיני ליצירת מטלות מגוונות, בניית בחנים והפקת תוכן לימודי מתקדם באופן מהיר ויעיל.</li>
+                    <li><strong>שילוב Notebook לתכנון שיעורים:</strong> שימוש בלוחות הדיגיטליים של Notebook (לשעבר Jamboard) לא רק לפעילות עם תלמידים, אלא גם לתכנון שיעורים אישי וארגון חומרים למורים.</li>
+                    <li><strong>Read Along:</strong> כלי המאפשר תרגול קריאה עם משוב בזמן אמת, שיכול להשתלב כפעילות העשרה או מטלה לתלמידים.</li>
+                    <li><strong>Vids (גוגל וידס):</strong> כלי חדש ליצירת סרטונים קצרים ועריכתם, שיוכל לשמש מורים ותלמידים להפקת תוכן ויזואלי עשיר.</li>
+                </ul>
+            </div>
+
+            <div id="tab5" class="tab-content card">
+                <h2>5. בדיקת מטלות ומתן משוב</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=בדיקת+מטלות" alt="Image of Checking assignments" class="w-full h-auto rounded-lg mb-4">
+                <p>תהליך בדיקת המטלות ומתן המשוב מתבצע בעיקר דרך לשונית "עבודת כיתה" ולשונית "ציונים":</p>
+
+                <h3>גישה למטלות שהוגשו:</h3>
+                <ul>
+                    <li>בכרטיסיית "עבודת כיתה", לחצו על המטלה הרצויה.</li>
+                    <li>תראו סיכום של מספר התלמידים שהגישו, שהוקצו להם ושלא הגישו.</li>
+                    <li>לחצו על "הצגת מטלה" כדי לראות את כל ההגשות.</li>
+                </ul>
+
+                <h3>בדיקה ומתן ציון:</h3>
+                <ul>
+                    <li>לחצו על הגשת תלמיד כדי לפתוח אותה בממשק הבדיקה.</li>
+                    <li>ניתן לסמן הערות ישירות על המסמך (אם מדובר במסמך Google Docs/Slides/Sheets).</li>
+                    <li>בצד ימין, תראו תיבת ציון ותיבת משוב פרטי לתלמיד.</li>
+                    <li>לאחר מתן ציון וכתיבת משוב, לחצו על "החזרה" כדי שהתלמיד יקבל את הציון והמשוב.</li>
+                </ul>
+
+                <h3>מעקב ציונים:</h3>
+                <ul>
+                    <li>כרטיסיית "ציונים" מאפשרת לכם לראות את כל הציונים של הכיתה במבט אחד ולעקוב אחר התקדמות התלמידים.</li>
+                </ul>
+            </div>
+
+            <div id="tab6" class="tab-content card">
+                <h2>6. שימוש ב-Google Meet (וידאו) בתוך הקלאסרום</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=Google+Meet" alt="Image of Google Meet" class="w-full h-auto rounded-lg mb-4">
+                <p>Google Meet משולב ישירות בקלאסרום ומשמש לשיעורים מקוונים, פגישות עם תלמידים, הדרכות ועוד.</p>
+
+                <h3>הפעלה מהירה של Meet מהכיתה:</h3>
+                <ul>
+                    <li>בכרטיסיית "עדכונים" (Stream) של כל כיתה, תראו קישור קבוע של Google Meet.</li>
+                    <li>לחצו עליו כדי להתחיל שיחת וידאו באופן מיידי עם כל חברי הכיתה.</li>
+                </ul>
+                <div class="tip">
+                    <p class="font-semibold">הערה:</p>
+                    <p>רק מורים יכולים להתחיל שיחה דרך קישור זה. התלמידים יכולים להצטרף ברגע שהמורה פותח את השיחה.</p>
+                </div>
+
+                <h3>תזמון שיחות Meet:</h3>
+                <ul>
+                    <li>ניתן לתזמן שיחות Meet דרך Google Calendar (אליו ניתן לגשת גם דרך סרגל האפליקציות של גוגל).</li>
+                    <li>כאשר אתם יוצרים אירוע ביומן, תוכלו לצרף לו קישור Meet ולשלוח הזמנות לתלמידים.</li>
+                </ul>
+            </div>
+
+            <div id="tab7" class="tab-content card">
+                <h2>7. שימוש בלוח ציור דיגיטלי (לשעבר Jamboard) בתוך הקלאסרום</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=לוח+ציור+דיגיטלי" alt="Image of Digital whiteboard" class="w-full h-auto rounded-lg mb-4">
+                <p>לוח ציור דיגיטלי אינטראקטיבי, כמו זה המשולב ב-Google Meet או אפליקציית Google Whiteboard, הוא כלי מעולה לסיכומים, ניתוח חומרים, יצירת מערכי שיעור, סדנאות משותפות ועוד.</p>
+
+                <h3>יצירת לוח ציור דיגיטלי:</h3>
+                <ul>
+                    <li>כאשר אתם יוצרים "חומרים" או "מטלות" בלשונית "עבודת כיתה", לחצו על כפתור "הוסף" (Add) ואז בחרו באפשרות "לוח דיגיטלי" (או חפשו "לוח לבן" / "Whiteboard" ברשימת היישומים).</li>
+                    <li>תוכלו ליצור לוח חדש או לבחור לוח קיים מהדרייב שלכם.</li>
+                </ul>
+
+                <h3>רעיונות לשימוש:</h3>
+                <ul>
+                    <li><strong>סיכומי שיעור משותפים:</strong> תלמידים יכולים לכתוב, לצייר ולהוסיף תמונות לסיכום משותף.</li>
+                    <li><strong>סיעור מוחות:</strong> כלי מצוין לסיעור מוחות קבוצתי.</li>
+                    <li><strong>ניתוח טקסטים/מקורות:</strong> הדבקת קטעי טקסט ואפשרות לסמן, להוסיף הערות ודיונים.</li>
+                    <li><strong>יצירת מערכי שיעור חזותיים:</strong> אתם יכולים להכין מערך שיעור אינטראקטיבי עם תמונות, סרטונים וקישורים.</li>
+                    <li><strong>יצירת פודקסטים:</strong> ניתן להקליט אודיו ולהעלות ללוח הדיגיטלי כחלק מפעילות חקר או הצגה. (הקלטה חיצונית והעלאה של הקובץ).</li>
+                </ul>
+            </div>
+
+            <div id="tab8" class="tab-content card">
+                <h2>8. יצירת מצגת Slides עם תוסף Plus AI</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=מצגת+AI" alt="Image of AI Presentation" class="w-full h-auto rounded-lg mb-4">
+                <p>Plus AI הוא תוסף מבוסס AI ל-Google Slides המאפשר יצירה ועיצוב אוטומטי של מצגות.</p>
+
+                <h3>שלב 1: התקנת התוסף (אם עדיין לא מותקן)</h3>
+                <ol>
+                    <li>פתחו מצגת Google Slides חדשה או קיימת.</li>
+                    <li>לכו לתפריט "הרחבות" (Extensions) > "תוספים" (Add-ons) > "הורד תוספים" (Get add-ons).</li>
+                    <li>חפשו "Plus AI for Google Slides" והתקינו אותו. ייתכן שתצטרכו לאשר הרשאות.</li>
+                </ol>
+
+                <h3>שלב 2: יצירת מצגת עם Plus AI</h3>
+                <ol>
+                    <li>לאחר ההתקנה, פתחו מצגת חדשה או קיימת.</li>
+                    <li>לכו לתפריט "הרחבות" (Extensions) > "Plus AI" > "New Presentation / Edit with Plus AI".</li>
+                    <li>הזינו את נושא המצגת ואת הנקודות העיקריות שברצונכם לכלול.</li>
+                    <li>Plus AI ייצור עבורכם סליידים עם עיצוגים מוצעים, טקסט ראשוני ואף תמונות רלוונטיות.</li>
+                    <li>תוכלו לערוך ולשנות את המצגת לפי הצרכים שלכם.</li>
+                </ol>
+                <p class="font-bold">יתרונות:</p>
+                <p>חיסכון זמן משמעותי ביצירת מצגות, עיצובים מקצועיים, וסיוע בהפקת רעיונות.</p>
+            </div>
+
+            <div id="tab9" class="tab-content card">
+                <h2>9. סיוע באמצעות Gemini מתוך הקלאסרום</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=Gemini+AI" alt="Image of Gemini AI" class="w-full h-auto rounded-lg mb-4">
+                <p>ג'מיני (Gemini) הוא מודל ה-AI של גוגל, והוא משולב באופן הולך וגובר במוצרי גוגל, כולל הקלאסרום.</p>
+                <ul>
+                    <li><strong>שילוב Gemini (ג'מיני) בדוקס:</strong> בקרוב תורחב האינטגרציה של ג'מיני ישירות בתוך Google Docs, שתאפשר סיוע מתקדם בכתיבה, ניסוח, סיכום והפקת רעיונות, מה שישדרם את תהליכי יצירת התוכן והלמידה.</li>
+                    <li><strong>סיוע בכתיבה:</strong> בתוך Google Docs (שמשולב בקלאסרום), תוכלו למצוא כלי עזרה לכתיבה (כמו "עזור לי לכתוב" או "Help me write") שיכולים לסייע בניסוח הוראות למטלות, יצירת חומרי קריאה או בניית מבחנים. טרם נפתח למשתמש ארגוני.</li>
+                    <li><strong>סיכום טקסטים:</strong> כלי AI מובנים יכולים לסכם עבורכם טקסטים ארוכים, מה שיכול להיות שימושי להכנת חומרי לימוד.</li>
+                    <li><strong>יצירת רעיונות:</strong> שאלו את ג'מיני שאלות ספציפיות בנוגע לשיעור, נושא או פעילות, והוא יוכל לספק לכם רעיונות לשיעור, שאלות לדיון, או כיווני חשיבה.</li>
+                </ul>
+                <div class="tip">
+                    <p class="font-semibold">הערה חשובה:</p>
+                    <p>הכלים האלה מתפתחים במהירות. מומלץ לבדוק באופן קבוע את עדכוני Google Workspace כדי לראות אילו יכולות חדשות נוספו.</p>
+                </div>
+            </div>
+
+            <div id="tab10" class="tab-content card">
+                <h2>10. היכרות עם כלי עזר של Gemini המשולבים בקלאסרום (טרם נפתח בעברית)</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=כלי+Gemini+עתידיים" alt="Image of Future Gemini tools" class="w-full h-auto rounded-lg mb-4">
+                <p>כיום, רוב היכולות המתקדמות של ג'מיני המשולבות ישירות בקלאסרום, כמו יצירת בחנים או סיכומים אוטומטיים מתוך תכני הכיתה, עדיין אינן זמינות במלואן בעברית. עם זאת, חשוב להיות מודעים לפוטנציאל ולצפות לפיתוחים אלו:</p>
+
+                <h3>מה צפוי?</h3>
+                <ul>
+                    <li><strong>יצירת בחנים אוטומטיים:</strong> ג'מיני יוכל לנתח את חומרי הלימוד שפרסמתם וליצור בחנים ושאלות הערכה באופן אוטומטי.</li>
+                    <li><strong>סיכומים חכמים:</strong> סיכומים אוטומטיים של דיונים בכיתה, חומרי קריאה או קטעי וידאו.</li>
+                    <li><strong>התאמה אישית:</strong> ג'מיני יוכל לסייע בהתאמת תכנים ופעילויות לתלמידים שונים, על בסיס נתוני הלמידה שלהם.</li>
+                    <li><strong>משוב אוטומטי (חלקי):</strong> סיוע במתן משוב ראשוני על מטלות פשוטות.</li>
+                </ul>
+                <div class="tip">
+                    <p class="font-semibold">המלצה:</p>
+                    <p>למרות שזה לא זמין בעברית עדיין, מומלץ לעקוב אחר ההתפתחויות והעדכונים מגוגל בנושא. ברגע שיהיו עדכונים רלוונטיים, אדאג ליידע אתכם ולספק הדרכה ייעודית.</p>
+                </div>
+            </div>
+
+            <div id="tab11" class="tab-content card">
+                <h2>11. העברת כל התוכן מ-Google Drive של רשת עמל ל-Google Drive של משרד החינוך (במכה אחת)</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=העברת+נתונים" alt="Image of Data transfer" class="w-full h-auto rounded-lg mb-4">
+                <p>הכלי המתאים לכך הוא Google Takeout. הוא מאפשר לך לייצא את כל הנתונים שלך ממוצרי גוגל שונים, כולל Drive, ולאחר מכן להעלות אותם מחדש.</p>
+                <div class="important-note">
+                    <p class="font-semibold">חשוב:</p>
+                    <p>שימו לב שתהליך זה מעביר את הקבצים עצמם. אם יש לכם קבצים מסוג Google Docs, Sheets, Slides וכו' (שהם "קבצים מקוריים" של גוגל), הם יומרו לפורמטים של Microsoft Office (לדוגמה, מסמך Google Docs יירד כקובץ Word .docx).</p>
+                </div>
+
+                <h3>שלב 1: ייצוא כל הנתונים מ-Google Drive של רשת עמל באמצעות Google Takeout</h3>
+                <ol>
+                    <li>התחברו לחשבון הגוגל שלכם השייך לרשת עמל.</li>
+                    <li>גשו לכתובת Google Takeout: <a href="https://takeout.google.com/" target="_blank">https://takeout.google.com/</a></li>
+                    <li>בדף הראשון של Takeout, תראו רשימה ארוכה של שירותי גוגל. בדרך כלל כולם מסומנים.</li>
+                    <li>לחצו על "ביטול בחירת הכל" (Deselect all) כדי לבטל את הסימון מכל השירותים.</li>
+                    <li>גללו מטה ובחרו רק בתיבה שליד "Drive" (סמנו אותה ב-V).</li>
+                    <li>אם יש לכם תוכן שתרצו להעביר גם משירותים אחרים (כמו תמונות מ-Photos, או מיילים מ-Gmail), תוכלו לסמן אותם גם כן, אך כרגע נתמקד ב-Drive.</li>
+                    <li>גללו שוב מטה ולחצו על כפתור "השלב הבא" (Next step).</li>
+                    <li><strong>הגדירו את פרטי הייצוא:</strong>
+                        <ul>
+                            <li><strong>שיטת שליחה (Delivery method):</strong> בחרו "שלח קישור להורדה באמצעות אימייל" (Send download link via email). זו האפשרות הנפוצה והנוחה ביותר.</li>
+                            <li><strong>תדירות (Frequency):</strong> בחרו "ייצא פעם אחת" (Export once).</li>
+                            <li><strong>סוג קובץ וגודל (File type & size):</strong>
+                                <ul>
+                                    <li><strong>סוג קובץ:</strong> השאירו "zip." (זהו פורמט דחיסה סטנדרטי).</li>
+                                    <li><strong>גודל ארכיון:</strong> בחרו גודל ארכיון שמתאים לכמות הנתונים שלכם. אם אינכם בטוחים, בחרו גודל גדול יחסית (לדוגמה, 10GB או 50GB). אם הנתונים שלכם חורגים מהגודל שבחרתם, גוגל תפצל אותם למספר קבצי ZIP.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>לחצו על כפתור "יצירת ייצוא" (Create export).</li>
+                    <li><strong>המתינו לסיום התהליך:</strong> גוגל תתחיל לארוז את כל הנתונים שלכם מ-Drive. תהליך זה יכול לקחת שעות רבות, ואף ימים, תלוי בכמות המידע שיש לכם. אין צורך להשאיר את המחשב פתוח. תקבלו התראה במייל (לחשבון עמל שלכם) כשהתהליך יסתיים.</li>
+                    <li><strong>הורידו את קובץ/י ה-ZIP:</strong> ברגע שתקבלו את המייל, יהיה בו קישור/ים להורדת קבצי ה-ZIP המכילים את כל הדרייב שלכם. הורידו את כל הקבצים למחשב שלכם.</li>
+                </ol>
+
+                <h3>שלב 2: העלאת כל התוכן ל-Google Drive של משרד החינוך</h3>
+                <ol>
+                    <li>התחברו לחשבון הגוגל שלכם השייך למשרד החינוך (ודאו שאתם מחוברים לחשבון הנכון שמסתיים ב-<span dir="ltr">@edu.org.il</span>).</li>
+                    <li>גשו ל-Google Drive של חשבון משרד החינוך שלכם.</li>
+                    <li><strong>חלצו את התכנים מקובץ/י ה-ZIP:</strong>
+                        <ul>
+                            <li>לכו לתיקייה במחשב שבה הורדתם את קבצי ה-ZIP.</li>
+                            <li>לחצו קליק ימני על קובץ ה-ZIP הראשון (אם יש מספר קבצים).</li>
+                            <li>בחרו באפשרות "חלץ הכל..." (Extract All...) או השתמשו בתוכנת כיווץ/חילוץ אחרת (כמו WinRAR או 7-Zip). זה יפתח את תוכן ה-ZIP לתיקייה חדשה במחשב שלכם, תוך שמירה על מבנה התיקיות שהיה לכם בדרייב.</li>
+                            <li>חזרו על הפעולה עבור כל קבצי ה-ZIP שהורדתם, אם התוכן פוצל למספר קבצים.</li>
+                        </ul>
+                    </li>
+                    <li><strong>העלו את התוכן ל-Drive של משרד החינוך:</strong>
+                        <ul>
+                            <li>גררו ושחררו (Drag and Drop) את כל התיקיות והקבצים שחילצתם ישירות לתוך חלון ה-Google Drive של משרד החינוך בדפדפן.</li>
+                            <li>לחלופין: ב-Google Drive של משרד החינוך, לחצו על כפתור "+חדש" (New) בפינה השמאלית העליונה.</li>
+                            <li>בחרו "העלאת תיקייה" (Folder upload) ובחרו את תיקיית הבסיס שמכילה את כל התוכן שחילצתם מה-ZIP.</li>
+                            <li>או בחרו "העלאת קובץ" (File upload) אם תרצו להעלות קבצים בודדים.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <div class="important-note">
+                    <p class="font-semibold">חשוב לדעת על קבצי גוגל שהומרו:</p>
+                    <p>קבצים מקוריים של גוגל (כמו Google Docs, Sheets, Slides) יורדו בפורמטים של Microsoft Office. כאשר תעלו אותם מחדש ל-Drive של משרד החינוך, הם יישמרו כקבצי Office. אם תרצו להמיר אותם בחזרה לפורמט של גוגל (כדי לעבוד עליהם באונליין עם שיתוף פעולה בזמן אמת), תצטרכו לפתוח כל קובץ ב-Drive של משרד החינוך וללכת ל"קובץ" (File) > "שמור כגוגל דוקס/שיטס/סליידס" (Save as Google Docs/Sheets/Slides).</p>
+                </div>
+            </div>
+
+            <div id="tab12" class="tab-content card">
+                <h2>12. תוספת למדריך: יצירת אתרים, אפליקציות ומשחקים עם Gemini Canvas</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=Gemini+Canvas" alt="Image of Gemini Canvas" class="w-full h-auto rounded-lg mb-4">
+
+                <h3>מה זה Gemini Canvas?</h3>
+                <p>Gemini Canvas הוא מרחב עבודה אינטראקטיבי חדש בתוך Google Gemini (בינה מלאכותית של גוגל), שנועד להקל על תהליכי יצירה, ליטוש ושיתוף של עבודות. הוא מאפשר לך, באמצעות הנחיות טקסטואליות פשוטות, לייצר קוד לאפליקציות אינטרנטיות, דפי אינטרנט, משחקים, אינפוגרפיקות, מסמכים ועוד, ולראות תצוגה מקדימה חיה של היצירה שלך בזמן אמת. זהו כלי המאפשר "קידוד חזותי" (Visual Coding) ויצירת אבות-טיפוס מהירים גם ללא ידע עמוק בתכנות.</p>
+
+                <h3>כיצד Gemini Canvas יכול לשמש אותנו בפדגוגיה דיגיטלית?</h3>
+                <p>Gemini Canvas פותח עולם חדש של אפשרויות ללמידה ויצירה בשיעורים שונים:</p>
+
+                <h4>יצירת עזרי למידה אינטראקטיביים:</h4>
+                <ul>
+                    <li><strong>דפי אינטרנט חינוכיים:</strong> צרו דפי אינטרנט פשוטים ואינטראקטיביים שיציגו מידע בנושא נלמד, עם שילוב של טקסט, תמונות ואלמנטים אינטראקטיביים (כמו כרטיסיות מידע או תרשימים).</li>
+                    <li><strong>אפליקציות קטנות/ווידג'טים:</strong> בנו אפליקציות רשת פשוטות למטרות למידה, לדוגמה: מחשבון נושא ספציפי במתמטיקה, סימולציה קצרה בתחום המדעים, או כלי להזנת נתונים קצרים לניתוח.</li>
+                    <li><strong>משחקים לימודיים בסיסיים:</strong> צרו משחקים קצרים ופשוטים (לדוגמה: משחקי התאמה, זיכרון, או חידונים אינטראקטיביים) כדי לתגבר חומר נלמד או להעריך ידע בצורה מהנה.</li>
+                    <li><strong>אינפוגרפיקות אינטראקטיביות:</strong> הציגו מידע מורכב (לדוגמה, ציר זמן היסטורי, תהליך מדעי) באופן ויזואלי ומובנה שקל יותר להבין ולנווט בו.</li>
+                </ul>
+
+                <h4>העצמת לומדים ויצירת פרויקטים:</h4>
+                <ul>
+                    <li><strong>פרויקטים אישיים/קבוצתיים:</strong> תלמידים יכולים להשתמש ב-Gemini Canvas ליצירת פרויקטים יצירתיים, כמו דפי אינטרנט המסכמים נושא מחקר, משחקון הממחיש עיקרון לימודי, או יישום קטן המציג נתונים שאספו.</li>
+                    <li><strong>לימוד יסודות תכנות (גם למתחילים):</strong> הכלי מאפשר לראות כיצד הנחיות טקסטואליות הופכות לקוד (HTML/CSS/JavaScript/React), ובכך מוריד את חסמי הכניסה לעולם התכנות ומאפשר למידה באמצעות ניסוי וטעייה.</li>
+                    <li><strong>כלי לסיעור מוחות וניסוח:</strong> מעבר ליצירת קוד, Canvas משפר גם את יכולות הכתיבה והניסוח, ומאפשר ליצור טיוטות, ללטש טקסטים אקדמיים, לכתוב נאומים ועוד, בשיתוף פעולה עם ה-AI.</li>
+                </ul>
+
+                <h3>כיצד לגשת ל-Gemini Canvas?</h3>
+                <ul>
+                    <li><strong>דרך אתר Gemini:</strong> גשו לכתובת <a href="https://gemini.google.com" target="_blank">gemini.google.com</a>.</li>
+                    <li><strong>כניסה ל-Canvas:</strong>
+                        <ul>
+                            <li>באזור כתיבת הפרומפטים (השאלות/ההנחיות) בתחתית המסך, חפשו ובחרו באפשרות "Canvas" (זה יכול להופיע כאייקון או כבחירה ברשימה).</li>
+                            <li>לחלופין, תוכלו לגשת ישירות ל-Canvas באמצעות הקישור: <a href="https://gemini.google.com/canvas" target="_blank">gemini.google.com/canvas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>דגשים חשובים:</h3>
+                <ul>
+                    <li><strong>זמינות:</strong> יכולת זו זמינה בדרך כלל למשתמשים מעל גיל 18 וללקוחות Google Workspace בעלי תוספים רלוונטיים (כמו Gemini Business, Gemini Enterprise, Gemini Education, Gemini Education Premium).</li>
+                    <li><strong>ניסוי וטעייה:</strong> עודדו את התלמידים והמורים להתנסות עם הכלי, להבין את הפוטנציאל שלו ולשלב אותו ביצירת תוכן לימודי מותאם אישית.</li>
+                </ul>
+            </div>
+
+            <!-- New tab content for Recommendations -->
+            <div id="tab13" class="tab-content card">
+                <h2>המלצות</h2>
+                <img src="https://placehold.co/600x200/a7d9f7/000?text=המלצות+וכלים" alt="Image of Recommendations and tools" class="w-full h-auto rounded-lg mb-4">
+                <p>כאן תוכלו למצוא המלצות לכלים וערוצים שיכולים לסייע לכם בהוראה ובלמידה דיגיטלית:</p>
+
+                <h3>ערוצי יוטיוב מומלצים:</h3>
+                <ul>
+                    <li><strong>הערוץ של מושיקו:</strong> <a href="https://www.youtube.com/@moshikoa" target="_blank">https://www.youtube.com/@moshikoa</a></li>
+                    <li><strong>הערוץ של הנרי:</strong> <a href="https://www.youtube.com/@AIWithHenry" target="_blank">https://www.youtube.com/@AIWithHenry</a></li>
+                </ul>
+
+                <h3>ארגז כלים שימושי:</h3>
+                <ul>
+                    <li><strong>ארגז הכלים של אלה:</strong> <a href="https://aistudio.google.com/app/apps/drive/1IC6Y6OWfBvc5o8j4kiMnoIS3-N1E0aTC?showPreview=true" target="_blank">https://aistudio.google.com/app/apps/drive/1IC6Y6OWfBvc5o8j4kiMnoIS3-N1E0aTC?showPreview=true</a></li>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="text-center py-6 text-gray-600 text-sm mt-8">
+            <p>&copy; 2024 מדריך מעבר לקלאסרום משרד החינוך. כל הזכויות שמורות.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Get all tab buttons and tab content elements
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        // Function to show a specific tab
+        function showTab(tabId) {
+            // Hide all tab contents
+            tabContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Deactivate all tab buttons
+            tabButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show the selected tab content
+            const selectedTabContent = document.getElementById(tabId);
+            if (selectedTabContent) {
+                selectedTabContent.classList.add('active');
+            }
+
+            // Activate the corresponding tab button
+            const selectedTabButton = document.querySelector(`.tab-button[data-tab="${tabId}"]`);
+            if (selectedTabButton) {
+                selectedTabButton.classList.add('active');
+                // Scroll the tabs container to bring the active tab into view
+                selectedTabButton.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+        }
+
+        // Add click event listeners to tab buttons
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.dataset.tab;
+                showTab(tabId);
+            });
+        });
+
+        // Show the first tab by default when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            if (tabButtons.length > 0) {
+                showTab(tabButtons[0].dataset.tab);
+            }
+        });
+    </script>
+</body>
+</html>
